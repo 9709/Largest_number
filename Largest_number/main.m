@@ -30,12 +30,14 @@ int main(int argc, const char * argv[]) {
     }
    
     //Prints out numbers in ascending order
-    for (int i=0; i < [list count]; i++) {
-    NSArray *number = list[i];
-    NSLog(@"%@", number);
-    }
+//    for (int i=0; i < [list count]; i++) {
+//    NSArray *number = list[i];
+//    NSLog(@"%@", number);
+//    }
 
    //Announce largest number
         NSLog(@"The largest number is %@.", list[5]);
    
 }
+
+// NOTE - Best I can do: The largest number does get called.  However not all the time, as it seems to rotate; can see when printing out all the array of numbers (section commented out).  The array of numbers does get sorted in ascending order, but when running the codes again, the order will change.  Seems to rotate back every 3 cycles - cannot figure out why.
