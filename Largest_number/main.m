@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
+    
+    NSArray *list = @[@"5", @"10", @"15", @"20", @"25", @"30"];
+    
+    
+    
     return 0;
 }
