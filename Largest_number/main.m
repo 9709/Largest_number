@@ -20,24 +20,24 @@ int main(int argc, const char * argv[]) {
                             [NSNumber numberWithInt: 20],
                             nil];
  
-    //for-loop to sort number in ascending order
+    //for-loop to sort number in descending order
     for (int i=0; i < [list count]; i++) {
-        for (int j=0; j < i-1; j++){
-            if ([list objectAtIndex:i] > [list objectAtIndex:j]){
-                [list exchangeObjectAtIndex:i withObjectAtIndex:j];
+//        for (int j=0; j < i-1; j++){
+            if ([list objectAtIndex:i] > [list objectAtIndex:0]){
+                [list exchangeObjectAtIndex:i withObjectAtIndex:0];
             }
-        }
+//        }
     }
    
     //Prints out numbers in ascending order
-//    for (int i=0; i < [list count]; i++) {
-//    NSArray *number = list[i];
-//    NSLog(@"%@", number);
-//    }
+    for (int i=0; i < [list count]; i++) {
+    NSArray *number = list[i];
+    NSLog(@"%@", number);
+    }
 
    //Announce largest number
-        NSLog(@"The largest number is %@.", list[5]);
+        NSLog(@"The largest number is %@.", list[0]);
    
 }
 
-// NOTE - Best I can do: The largest number does get called.  However not all the time, as it seems to rotate; can see when printing out all the array of numbers (section commented out).  The array of numbers does get sorted in ascending order, but when running the codes again, the order will change.  Seems to rotate back every 3 cycles - cannot figure out why.
+// NOTE - Best I can do: The largest number does get called.  However not all the time, as it seems to rotate; can see when printing out all the array of numbers (section commented out).  The order of numbers changes every two or three times the code is ran - cannot figure out why.
