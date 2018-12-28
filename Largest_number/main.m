@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
  
     //for-loop to sort number in descending order
     for (int i=0; i < [list count]; i++) {
-//        for (int j=0; j < i-1; j++){
+//        for (int j=0; j < i-1; j++){ - OLD
             if ([list objectAtIndex:i] > [list objectAtIndex:0]){
                 [list exchangeObjectAtIndex:i withObjectAtIndex:0];
             }
@@ -30,10 +30,10 @@ int main(int argc, const char * argv[]) {
     }
    
     //Prints out numbers in ascending order
-    for (int i=0; i < [list count]; i++) {
-    NSArray *number = list[i];
-    NSLog(@"%@", number);
-    }
+//    for (int i=0; i < [list count]; i++) {
+//    NSArray *number = list[i];
+//    NSLog(@"%@", number);
+//    }
 
    //Announce largest number
         NSLog(@"The largest number is %@.", list[0]);
